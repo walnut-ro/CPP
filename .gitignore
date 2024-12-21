@@ -1,0 +1,29 @@
+# Ignore everything by default
+/*
+
+# Allow .gitignore itself
+!.gitignore
+
+# Allow the entire CPP directory and its contents
+!/CPP/
+
+# Ignore commonly unwanted files globally
+*.o
+*.out
+*.a
+*.so
+*.exe
+*.tmp
+*.log
+
+# Ignore all .vscode directories and their contents
+**/.vscode/
+
+# Ignore system-specific files
+.DS_Store
+
+# Ignore backup and swap files globally
+*~
+*.bak
+*.swp
+*.swo
