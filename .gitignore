@@ -22,6 +22,7 @@
 # Ignore system-specific files
 .DS_Store
 
+
 # Ignore backup and swap files globally
 *~
 *.bak
