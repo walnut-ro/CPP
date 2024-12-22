@@ -4,8 +4,12 @@
 # Allow .gitignore itself
 !.gitignore
 
-# Allow the entire CPP directory and its contents
+# Allow the CPP directory and its contents
 !/CPP/
+!/CPP/**
+
+# Allow all CPP-like directories (e.g., CPP_00, CPP_01, CPP_02, etc.)
+!/CPP_*/
 
 # Ignore commonly unwanted files globally
 *.o
@@ -22,9 +26,11 @@
 # Ignore system-specific files
 .DS_Store
 
-
 # Ignore backup and swap files globally
 *~
 *.bak
 *.swp
 *.swo
+*.swn
+*.swm
+*.swl

@@ -1,0 +1,4 @@
+This is an example text.
+This text is used to test string replacement.
+Sometimes, you need to replace a word in the text.
+Text replacement can be useful in many situations.
