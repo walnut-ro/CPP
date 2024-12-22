@@ -1,6 +1,13 @@
 # Ignore everything by default
 /*
 
+# Exclude all files without extensions
+*
+
+# Allow files with extensions
+!*.*
+
+
 # Allow .gitignore itself
 !.gitignore
 
