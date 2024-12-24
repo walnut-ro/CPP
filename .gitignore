@@ -1,22 +1,17 @@
 # Ignore everything by default
 /*
 
-# Exclude all files without extensions
-*
-
-# Allow files with extensions
-!*.*
-
-
 # Allow .gitignore itself
 !.gitignore
 
-# Allow the CPP directory and its contents
+# Allow all CPP directories (e.g., CPP/, CPP_00/, CPP_01/, CPP_02/, etc.)
 !/CPP/
-!/CPP/**
-
-# Allow all CPP-like directories (e.g., CPP_00, CPP_01, CPP_02, etc.)
 !/CPP_*/
+
+# Allow files with extensions in these directories
+!*.*
+!/CPP/**
+!/CPP_**/
 
 # Ignore commonly unwanted files globally
 *.o
