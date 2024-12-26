@@ -1,21 +1,23 @@
 #include "Cat.hpp"
+#include <string>
 #include <iostream>
 
 /**
  * @brief Default Constructor
  */
-Cat::Cat(void) : Animal("Cat"), _brain(new Brain())
+Cat::Cat(void) : Animal("Cat")
 {
     std::cout << "Cat constructor Called" << std::endl;
+    this->_type = "Cat";
 }
 
 /**
- * @brief Copy Constructor
+ * @brief Copy constructor
  */
-Cat::Cat(Cat const &src) : Animal(src)
+Cat::Cat(Cat const &src) : Animal(src._type)
 {
     std::cout << "Cat - Copy constructor called." << std::endl;
-    this->_brain = new Brain(*src._brain); // Deep copy of Brain
+    *this = src;
 }
 
 /**
@@ -23,30 +25,26 @@ Cat::Cat(Cat const &src) : Animal(src)
  */
 Cat::~Cat(void)
 {
-    delete this->_brain; // Free the allocated memory
     std::cout << "Cat - Destructor called." << std::endl;
 }
 
 /**
- * @brief Copy Assignment Operator
+ * @brief Copy assignment operator
  */
 Cat &Cat::operator=(Cat const &src)
 {
     if (this != &src)
     {
-        Animal::operator=(src); // Assign base class attributes
-        if (this->_brain)
-            delete this->_brain;               // Free old memory
-        this->_brain = new Brain(*src._brain); // Deep copy
+        this->_type = src.getType();
     }
     std::cout << "Cat - Copy assignment operator called." << std::endl;
     return (*this);
 }
 
 /**
- * @brief Override MakeSound
+ * @brief Member function - Make Sound
  */
 void Cat::makeSound(void) const
 {
-    std::cout << "Cat: Meow Meow!" << std::endl;
+    std::cout << this->_type << ": Meooow meoooowwwwwwww" << std::endl;
 }
