@@ -2,18 +2,19 @@
 CXX      = c++
 CXXFLAGS = -Wall -Wextra -Werror -std=c++20
 
-# Executable and source files
-NAME     = ex02
+# Executable and files
+NAME     = internTest
 SRCS     = main.cpp \
            Bureaucrat.cpp \
            AForm.cpp \
            ShrubberyCreationForm.cpp \
            RobotomyRequestForm.cpp \
-           PresidentialPardonForm.cpp
+           PresidentialPardonForm.cpp \
+           Intern.cpp
 
 OBJS     = $(SRCS:.cpp=.o)
 
-# Build rules
+# Rules
 all: $(NAME)
 
 $(NAME): $(OBJS)
@@ -24,10 +25,10 @@ $(NAME): $(OBJS)
 
 clean:
 	rm -f $(OBJS)
-	rm -f *_shrubbery
 
 fclean: clean
 	rm -f $(NAME)
+	rm -f *_shrubbery
 
 re: fclean all
 
